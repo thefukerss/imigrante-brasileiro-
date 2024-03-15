@@ -5,100 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador de Países, Estados e Cidades</title>
+    <title>Últimos Desenvolvimentos Web</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-image: url('planodefundo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
-        .container {
-            max-width: 800px;
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            max-width: 80%;
+            margin: auto;
         }
 
         h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        select {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
             margin-bottom: 20px;
-        }
-
-        button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
         }
 
         p {
             font-size: 18px;
             line-height: 1.6;
         }
+
+        /* Estilos para dispositivos móveis */
+        @media screen and (max-width: 600px) {
+            .content {
+                padding: 10px;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Buscador de Países, Estados e Cidades</h1>
-
-        <form id="countryForm">
-            <label for="countries">Selecione um país:</label>
-            <select id="countries" onchange="fetchStates(this.value)">
-                <option value="">Selecione...</option>
-                <!-- Opções de países aqui -->
-            </select>
-        </form>
-
-        <form id="stateForm" style="display:none;">
-            <label for="states">Selecione um estado:</label>
-            <select id="states" onchange="fetchCities(this.value)">
-                <option value="">Selecione...</option>
-                <!-- Opções de estados aqui -->
-            </select>
-        </form>
-
-        <form id="cityForm" style="display:none;">
-            <label for="cities">Selecione uma cidade:</label>
-            <select id="cities">
-                <option value="">Selecione...</option>
-                <!-- Opções de cidades aqui -->
-            </select>
-        </form>
+    <div class="content">
+        <h1>Meu Site Responsivo</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
     </div>
-
-    <script>
-        // Função para buscar os estados de um país
-        function fetchStates(countryCode) {
-            // Implemente a lógica para buscar os estados do país selecionado
-            // Exemplo: fetch('/api/states?country=' + countryCode)
-            document.getElementById('stateForm').style.display = 'block'; // Mostra o formulário de estados
-        }
-
-        // Função para buscar as cidades de um estado
-        function fetchCities(stateCode) {
-            // Implemente a lógica para buscar as cidades do estado selecionado
-            // Exemplo: fetch('/api/cities?state=' + stateCode)
-            document.getElementById('cityForm').style.display = 'block'; // Mostra o formulário de cidades
-        }
-    </script>
 </body>
 
 </html>
